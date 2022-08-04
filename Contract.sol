@@ -39,7 +39,7 @@ contract Mycontract {
          return Address.balance;
     }
 
-    function getvalue() public pure returns (uint)      //pure functions means it doesnt modify or read from state variable
+    function getvalue() public pure returns (uint)   //pure functions means it doesnt modify or read from state variable
     {
         uint value;
         return value;
