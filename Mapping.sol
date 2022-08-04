@@ -3,19 +3,19 @@ pragma solidity ^0.7.4;
 contract Maps {
 
    //simple mapping setter and getter
-    // mapping (uint => string) public Books;     //declare and getter function
+    mapping (uint => string) public oneBooks;     //declare and getter function
 
-    // function setbooks(uint id,string memory Bookname) public{
+    function onesetbooks(uint id,string memory Booknam) public{
 
-    //     Books[id] = Bookname;
+        oneBooks[id] = Booknam;
         
-    // }
+    }
 
-    // mapping (address => mapping (uint => string)) public Book_Collections;  //dec and getter function
+    mapping (address => mapping (uint => string)) public oneBook_Collections;  //dec and getter function
 
-    // function set_Col(uint id,string memory Bookname) public {
-    //     Book_Collections[msg.sender][id] = Bookname;
-    // }
+    function oneset_Col(uint id,string memory Booknam) public {
+        oneBook_Collections[msg.sender][id] = Booknam;
+    }
 
     struct Details {
         string name;

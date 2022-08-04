@@ -2,6 +2,12 @@
 pragma solidity ^0.7.4;
 contract RoomReservation {
 
+    //events
+    //modifiers
+    //functions
+    //payment transfer
+    
+
     enum Status {Occupied,Vacant}
     Status public CurrentStatus;
     event Occupy(address Occupant,uint value);
@@ -27,7 +33,6 @@ contract RoomReservation {
     modifier PriceCheck(uint _value) {
         require(msg.value >=_value,"No enough payment");
             _;
-        
     }
 
 
@@ -36,7 +41,6 @@ contract RoomReservation {
         (bool sent, bytes memory _data)= Owner.call{value: msg.value}("Hi");
         require(sent);
         emit Occupy(msg.sender,msg.value);
-        
     }
 
 
